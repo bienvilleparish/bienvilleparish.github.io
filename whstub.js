@@ -178,10 +178,7 @@ function MessageRouter() {
     }
 
     this.checkChromeLocal = function() {
-        if (window.chrome)
-            if (document.location.protocol.substring(0, 4) == "file")
-            return true;
-        return false;
+        return !window.gbIE && document.location.protocol.substring(0, 4) === "file"
     }
 }
 

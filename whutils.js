@@ -1123,10 +1123,7 @@ function RH_AddMasterBreadcrumbs(relHomePage,styleInfo, separator, strHome, strH
 }
 
 function isChromeLocal() {
-    if (window.chrome)
-        if (document.location.protocol.substring(0, 4) == "file")
-        return true;
-    return false;
+    return !window.gbIE && document.location.protocol.substring(0, 4) === "file"
 }
 
 
